@@ -190,11 +190,24 @@ class CustomAttributes
 				class data
 				{
 					singleType="BOOL";
-					value=0;
+					value=1;
 				};
 			};
 		};
 		class Attribute2
+		{
+			property="afi_editor_enhancements_safeStartLength";
+			expression="afi_editor_enhancements_safeStartLength = _value;";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=10;
+				};
+			};
+		};
+		class Attribute3
 		{
 			property="afi_editor_enhancements_enableViewdistance";
 			expression="afi_editor_enhancements_enableViewdistance = _value;";
@@ -207,7 +220,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute3
+		class Attribute4
 		{
 			property="afi_orbat_export_sideDescriptionEast";
 			expression="false";
@@ -220,7 +233,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute4
+		class Attribute5
 		{
 			property="afi_orbat_export_sideDescriptionWest";
 			expression="false";
@@ -233,7 +246,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute5
+		class Attribute6
 		{
 			property="afi_orbat_export_enableSideDataEast";
 			expression="false";
@@ -246,7 +259,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute6
+		class Attribute7
 		{
 			property="afi_editor_enhancements_enableViewdistanceServer";
 			expression="afi_editor_enhancements_enableViewdistanceServer = _value;";
@@ -259,7 +272,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=7;
+		nAttributes=8;
 	};
 	class Category1
 	{
