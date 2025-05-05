@@ -38,7 +38,7 @@ class RscTitles {
     #include "BC_setup\rscTitles.hpp"
 };
 
-cba_settings_hasSettingsFile = 1;
+//cba_settings_hasSettingsFile = 1;
 
 class GRAD_Replay {
     precision = 5;                                    // precision of replay, 5 means every 5 seconds one snapshot (number)
