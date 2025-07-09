@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1538.1681,30.5,5003.3804};
-		dir[]={0.071351968,-0.44906822,0.89064395};
-		up[]={0.035861209,0.89349747,0.44763407};
-		aside[]={0.99680632,3.7252903e-09,-0.079856932};
+		pos[]={1787.4252,16.128948,5970.1147};
+		dir[]={0.11482105,-0.48458883,0.86717343};
+		up[]={0.06360846,0.87474203,0.48039594};
+		aside[]={0.99134755,0,-0.13126275};
 	};
 };
 binarizationWanted=0;
@@ -304,7 +304,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=78;
+									items=80;
 									class Item0
 									{
 										class data
@@ -929,6 +929,22 @@ class CustomAttributes
 											value="tunuti_utilities_enablespectatorstats";
 										};
 									};
+									class Item78
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tunuti_radiochannels_additional_lr_west";
+										};
+									};
+									class Item79
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tunuti_radiochannels_additional_lr_east";
+										};
+									};
 								};
 							};
 						};
@@ -939,7 +955,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=78;
+									items=80;
 									class Item0
 									{
 										class data
@@ -3032,7 +3048,61 @@ class CustomAttributes
 													class data
 													{
 														singleType="BOOL";
-														value=0;
+														value=1;
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item78
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Additional LR 1,Additional LR 2";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
+									class Item79
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="Additional LR 1,Additional LR 2";
 													};
 												};
 												class Item1
