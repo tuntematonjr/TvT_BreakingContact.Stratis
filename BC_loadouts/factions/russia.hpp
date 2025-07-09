@@ -23,10 +23,7 @@ class russia {
     class Type {
         class Soldier_F {
             addItemsToUniform[] = {
-                LIST_8("ACE_fieldDressing"),
-                LIST_2("ACE_epinephrine"),
-                LIST_2("ACE_morphine"),
-                LIST_2("ACE_tourniquet"),
+                BASE_MEDICAL,
                 LIST_2("rhs_mag_9x19_17"),
                 "ACE_MapTools",
                 "ACE_Flashlight_KSF1"
@@ -34,7 +31,7 @@ class russia {
             addItemsToVest[] = {
                 LIST_8("rhs_30Rnd_545x39_7N10_AK"),
                 LIST_2("rhs_mag_rgd5"),
-                LIST_2("rhs_mag_rdg2_white")
+                LIST_2("SmokeShell")
             };
             addItemsToBackpack[] = {
                 LIST_10("rhs_30Rnd_545x39_7N10_AK"),
@@ -53,12 +50,8 @@ class russia {
                 LIST_3("ACE_FlareTripMine_Mag")
             };
             addItemsToUniform[] = {
-                LIST_8("ACE_fieldDressing"),
-                LIST_2("ACE_epinephrine"),
-                LIST_2("ACE_morphine"),
-                LIST_2("ACE_tourniquet"),
+                BASE_MEDICAL,
                 LIST_2("rhs_mag_9x19_17"),
-                "ACE_key_east",
                 "ACE_MapTools",
                 "ACE_Flashlight_KSF1"
             };
@@ -86,7 +79,7 @@ class russia {
             addItemsToVest[] = {
                 "rhs_100Rnd_762x54mmR_green",
                 LIST_2("rhs_mag_rgd5"),
-                LIST_2("rhs_mag_rdg2_white")
+                LIST_2("SmokeShell")
             };
             addItemsToBackpack[] = {
                 LIST_4("rhs_100Rnd_762x54mmR_green")
@@ -112,7 +105,7 @@ class russia {
             addItemsToVest[] = {
                 LIST_2("rhs_75Rnd_762x39mm_tracer"),
                 LIST_2("rhs_mag_rgd5"),
-                LIST_2("rhs_mag_rdg2_white")
+                LIST_2("SmokeShell")
             };
             addItemsToBackpack[] = {
                 LIST_8("rhs_75Rnd_762x39mm_tracer")
@@ -151,7 +144,7 @@ class russia {
             addItemsToVest[] = {
                 LIST_8("rhs_30Rnd_545x39_7N10_AK"),
                 LIST_2("rhs_mag_rgd5"),
-                LIST_2("rhs_mag_rdg2_white"),
+                LIST_2("SmokeShell"),
                 "rhs_rpg26_mag"
             };
         };
@@ -160,14 +153,8 @@ class russia {
         class Medic_F: Soldier_F {
             backpack = "rhssaf_kitbag_md2camo";
             addItemsToBackpack[] = {    
-                LIST_5("ACE_tourniquet"),
-                LIST_20("ACE_fieldDressing"),
-                LIST_20("ACE_fieldDressing"),
-                LIST_20("ACE_morphine"),
-                LIST_20("ACE_epinephrine"),
-                LIST_20("ACE_bloodIV_250"),
-                LIST_10("ACE_bloodIV_500"),
-                LIST_5("rhs_mag_rdg2_white")
+                BASE_MEDIC,
+                LIST_5("SmokeShell")
             };
         };
 
@@ -181,19 +168,15 @@ class russia {
             handgunWeaponMagazine = "rhs_mag_9x19_17";
             underBarrelMagazine = "rhs_GRD40_White";
             addItemsToUniform[] = {
-                LIST_8("ACE_fieldDressing"),
-                LIST_2("ACE_epinephrine"),
-                LIST_2("ACE_morphine"),
-                LIST_2("ACE_tourniquet"),
+                BASE_MEDICAL,
                 LIST_2("rhs_mag_9x19_17"),
-                "ACE_key_east",
                 "ACE_MapTools",
                 "ACE_Flashlight_KSF1"
             };
             addItemsToVest[] = {
                 LIST_6("rhs_30Rnd_762x39mm_polymer_tracer"),
                 LIST_2("rhs_mag_rgd5"),
-                LIST_2("rhs_mag_rdg2_white")
+                LIST_2("SmokeShell")
             };
             addItemsToBackpack[] = {
                 LIST_6("rhs_30Rnd_762x39mm_polymer_tracer"),

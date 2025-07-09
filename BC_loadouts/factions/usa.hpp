@@ -22,10 +22,7 @@ class USA {
     class Type {
         class Soldier_F {
             addItemsToUniform[] = {
-                LIST_8("ACE_fieldDressing"),
-                LIST_2("ACE_epinephrine"),
-                LIST_2("ACE_morphine"),
-                LIST_2("ACE_tourniquet"),
+                BASE_MEDICAL,
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50"
@@ -52,12 +49,8 @@ class USA {
                 LIST_3("ACE_FlareTripMine_Mag")
             };
             addItemsToUniform[] = {
-                LIST_8("ACE_fieldDressing"),
-                LIST_2("ACE_epinephrine"),
-                LIST_2("ACE_morphine"),
-                LIST_2("ACE_tourniquet"),
+                BASE_MEDICAL,
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
-                "ACE_key_west",
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50"
             };
@@ -138,10 +131,7 @@ class USA {
         class Soldier_LAT_F: Soldier_F {
             secondaryWeapon = "rhs_weap_m72a7";
             addItemsToUniform[] = {
-                LIST_8("ACE_fieldDressing"),
-                LIST_2("ACE_epinephrine"),
-                LIST_2("ACE_morphine"),
-                LIST_2("ACE_tourniquet"),
+                BASE_MEDICAL,
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50",
@@ -153,13 +143,7 @@ class USA {
         class Medic_F: Soldier_F {
             backpack = "B_Kitbag_cbr";
             addItemsToBackpack[] = {
-                LIST_5("ACE_tourniquet"),
-                LIST_20("ACE_fieldDressing"),
-                LIST_20("ACE_fieldDressing"),
-                LIST_20("ACE_morphine"),
-                LIST_20("ACE_epinephrine"),
-                LIST_20("ACE_bloodIV_250"),
-                LIST_10("ACE_bloodIV_500"),
+                BASE_MEDIC,
                 LIST_5("SmokeShell")
             };
         };
@@ -170,10 +154,7 @@ class USA {
             primaryWeapon = "rhs_weap_m4a1_carryhandle_m203S";
             underBarrelMagazine = "1Rnd_Smoke_Grenade_shell";
             addItemsToUniform[] = {
-                LIST_8("ACE_fieldDressing"),
-                LIST_2("ACE_epinephrine"),
-                LIST_2("ACE_morphine"),
-                LIST_2("ACE_tourniquet"),
+                BASE_MEDICAL,
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
                 "ACE_key_west",
                 "ACE_MapTools",
