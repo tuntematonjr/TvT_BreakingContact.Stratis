@@ -1,6 +1,5 @@
 [] call BC_setup_fnc_initialSpawnClient;
 
-["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
 [] call BC_setup_fnc_addInteractions; // add interactions
 
 player addEventHandler ["handleRating", {

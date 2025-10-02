@@ -6,20 +6,28 @@ class EditorData
 	scaleGridStep=1;
 	autoGroupingDist=10;
 	toggles=1;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
 	class ItemIDProvider
 	{
-		nextID=1653;
+		nextID=1657;
 	};
 	class MarkerIDProvider
 	{
 		nextID=16;
 	};
+	class LayerIndexProvider
+	{
+		nextID=1;
+	};
 	class Camera
 	{
-		pos[]={1787.4252,16.128948,5970.1147};
-		dir[]={0.11482105,-0.48458883,0.86717343};
-		up[]={0.06360846,0.87474203,0.48039594};
-		aside[]={0.99134755,0,-0.13126275};
+		pos[]={1831.1323,70.70903,5651.0806};
+		dir[]={-0.1560999,-0.50569481,-0.84857225};
+		up[]={-0.091503747,0.86267364,-0.49742302};
+		aside[]={-0.98357922,1.0514632e-06,0.18093753};
 	};
 };
 binarizationWanted=0;
@@ -203,11 +211,24 @@ class CustomAttributes
 				class data
 				{
 					singleType="SCALAR";
-					value=10;
+					value=15;
 				};
 			};
 		};
 		class Attribute3
+		{
+			property="afi_editor_enhancements_viewdistance";
+			expression="afi_editor_enhancements_viewdistance = _value;";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=3000;
+				};
+			};
+		};
+		class Attribute4
 		{
 			property="afi_editor_enhancements_enableViewdistance";
 			expression="afi_editor_enhancements_enableViewdistance = _value;";
@@ -220,7 +241,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute4
+		class Attribute5
 		{
 			property="afi_orbat_export_sideDescriptionEast";
 			expression="false";
@@ -233,7 +254,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute5
+		class Attribute6
 		{
 			property="afi_orbat_export_sideDescriptionWest";
 			expression="false";
@@ -246,7 +267,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute6
+		class Attribute7
 		{
 			property="afi_orbat_export_enableSideDataEast";
 			expression="false";
@@ -259,7 +280,7 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute7
+		class Attribute8
 		{
 			property="afi_editor_enhancements_enableViewdistanceServer";
 			expression="afi_editor_enhancements_enableViewdistanceServer = _value;";
@@ -272,12 +293,25 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=8;
+		nAttributes=9;
 	};
 	class Category1
 	{
 		name="Scenario";
 		class Attribute0
+		{
+			property="EnableTargetDebug";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		class Attribute1
 		{
 			property="cba_settings_hash";
 			expression="false";
@@ -3131,7 +3165,20 @@ class CustomAttributes
 				};
 			};
 		};
-		class Attribute1
+		class Attribute2
+		{
+			property="EnableDebugConsole";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		class Attribute3
 		{
 			property="cba_settings_hasSettingsFile";
 			expression="false";
@@ -3144,7 +3191,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=2;
+		nAttributes=4;
 	};
 };
 class Mission
@@ -4198,9 +4245,8 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="[this, 'Command'] call BC_setup_fnc_registerDynamicGroup;";
 						name="blufor_teamlead";
-						description="Commander (must be selected) @Command";
+						description="Commander (must be selected)@Alpha 10";
 						isPlayable=1;
 					};
 					id=1093;
@@ -4262,7 +4308,7 @@ class Mission
 					{
 						rank="CAPTAIN";
 						name="blufor_assistant";
-						description="Assistant Commander";
+						description="Assistant Commander@Alpha 10";
 						isPlayable=1;
 					};
 					id=1094;
@@ -4271,8 +4317,26 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Alpha 10""];";
 			};
 			id=1092;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="B Alpha 10";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item17
 		{
@@ -4294,8 +4358,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="[this, 'Alpha'] call BC_setup_fnc_registerDynamicGroup;";
-						description="Squad Leader@Alpha";
+						description="Squad Leader@Alpha 1";
 						isPlayable=1;
 					};
 					id=1096;
@@ -4357,7 +4420,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Squad Medic";
+						description="Squad Medic@Alpha 1";
 						isPlayable=1;
 					};
 					id=1097;
@@ -4376,7 +4439,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (M240B)";
+						description="Ammo Bearer (M240B)@Alpha 1";
 						isPlayable=1;
 					};
 					id=1098;
@@ -4425,7 +4488,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium MG (M240B)";
+						description="Medium MG (M240B)@Alpha 1";
 						isPlayable=1;
 					};
 					id=1099;
@@ -4474,7 +4537,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (M72A7)";
+						description="LAT-Specialist (M72A7)@Alpha 1";
 						isPlayable=1;
 					};
 					id=1100;
@@ -4523,7 +4586,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Team Leader@Alpha2";
+						description="Team Leader@Alpha 1";
 						isPlayable=1;
 					};
 					id=1101;
@@ -4585,7 +4648,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Machine Gunner (M249)";
+						description="Machine Gunner (M249)@Alpha 1";
 						isPlayable=1;
 					};
 					id=1102;
@@ -4634,7 +4697,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT (Carl Gustav)";
+						description="Heavy AT (Carl Gustav)@Alpha 1";
 						isPlayable=1;
 					};
 					id=1104;
@@ -4709,7 +4772,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Rifleman";
+						description="Rifleman@Alpha 1";
 						isPlayable=1;
 					};
 					id=1105;
@@ -4758,7 +4821,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="HAT Ammo Carrier";
+						description="HAT Ammo Carrier@Alpha 1";
 						isPlayable=1;
 					};
 					id=1358;
@@ -4823,8 +4886,26 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Alpha 1""];";
 			};
 			id=1095;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="B Alpha 1";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item18
 		{
@@ -4846,8 +4927,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="call{[this, 'Bravo'] call BC_setup_fnc_registerDynamicGroup;}";
-						description="Squad Leader@Bravo";
+						description="Squad Leader@Alpha 2";
 						isPlayable=1;
 					};
 					id=1107;
@@ -4909,7 +4989,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Squad Medic";
+						description="Squad Medic@Alpha 2";
 						isPlayable=1;
 					};
 					id=1108;
@@ -4928,7 +5008,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (M240B)";
+						description="Ammo Bearer (M240B)@Alpha 2";
 						isPlayable=1;
 					};
 					id=1109;
@@ -4977,7 +5057,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium MG (M240B)";
+						description="Medium MG (M240B)@Alpha 2";
 						isPlayable=1;
 					};
 					id=1110;
@@ -5026,7 +5106,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (M72A7)";
+						description="LAT-Specialist (M72A7)@Alpha 2";
 						isPlayable=1;
 					};
 					id=1111;
@@ -5075,7 +5155,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Team Leader@Bravo2";
+						description="Team Leader@Alpha 2";
 						isPlayable=1;
 					};
 					id=1112;
@@ -5137,7 +5217,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Machine Gunner (M249)";
+						description="Machine Gunner (M249)@Alpha 2";
 						isPlayable=1;
 					};
 					id=1113;
@@ -5186,7 +5266,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT (Carl Gustav)";
+						description="Heavy AT (Carl Gustav)@Alpha 2";
 						isPlayable=1;
 					};
 					id=1115;
@@ -5261,7 +5341,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Rifleman";
+						description="Rifleman@Alpha 2";
 						isPlayable=1;
 					};
 					id=1116;
@@ -5310,7 +5390,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="HAT Ammo Carrier";
+						description="HAT Ammo Carrier@Alpha 2";
 						isPlayable=1;
 					};
 					id=1359;
@@ -5375,8 +5455,26 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Alpha 2""];";
 			};
 			id=1106;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="B Alpha 2";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item19
 		{
@@ -5398,8 +5496,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="call{[this, 'Charlie'] call BC_setup_fnc_registerDynamicGroup;}";
-						description="Squad Leader@Charlie";
+						description="Squad Leader@Alpha 3";
 						isPlayable=1;
 					};
 					id=1118;
@@ -5461,7 +5558,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Squad Medic";
+						description="Squad Medic@Alpha 3";
 						isPlayable=1;
 					};
 					id=1119;
@@ -5480,7 +5577,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (M240B)";
+						description="Ammo Bearer (M240B)@Alpha 3";
 						isPlayable=1;
 					};
 					id=1120;
@@ -5529,7 +5626,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium MG (M240B)";
+						description="Medium MG (M240B)@Alpha 3";
 						isPlayable=1;
 					};
 					id=1121;
@@ -5578,7 +5675,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (M72A7)";
+						description="LAT-Specialist (M72A7)@Alpha 3";
 						isPlayable=1;
 					};
 					id=1122;
@@ -5627,7 +5724,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Team Leader@Charlie2";
+						description="Team Leader@Alpha 3";
 						isPlayable=1;
 					};
 					id=1123;
@@ -5689,7 +5786,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Machine Gunner (M249)";
+						description="Machine Gunner (M249)@Alpha 3";
 						isPlayable=1;
 					};
 					id=1124;
@@ -5738,7 +5835,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT (Carl Gustav)";
+						description="Heavy AT (Carl Gustav)@Alpha 3";
 						isPlayable=1;
 					};
 					id=1126;
@@ -5813,7 +5910,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Rifleman";
+						description="Rifleman@Alpha 3";
 						isPlayable=1;
 					};
 					id=1127;
@@ -5862,7 +5959,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="HAT Ammo Carrier";
+						description="HAT Ammo Carrier@Alpha 3";
 						isPlayable=1;
 					};
 					id=1360;
@@ -5927,8 +6024,26 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Alpha 3""];";
 			};
 			id=1117;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="B Alpha 3";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item20
 		{
@@ -5950,8 +6065,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="call{[this, 'Delta'] call BC_setup_fnc_registerDynamicGroup;}";
-						description="Squad Leader@Delta";
+						description="Squad Leader@Alpha 4";
 						isPlayable=1;
 					};
 					id=1174;
@@ -6013,7 +6127,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Squad Medic";
+						description="Squad Medic@Alpha 4";
 						isPlayable=1;
 					};
 					id=1175;
@@ -6032,7 +6146,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (M240B)";
+						description="Ammo Bearer (M240B)@Alpha 4";
 						isPlayable=1;
 					};
 					id=1176;
@@ -6081,7 +6195,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium MG (M240B)";
+						description="Medium MG (M240B)@Alpha 4";
 						isPlayable=1;
 					};
 					id=1177;
@@ -6130,7 +6244,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (M72A7)";
+						description="LAT-Specialist (M72A7)@Alpha 4";
 						isPlayable=1;
 					};
 					id=1178;
@@ -6179,7 +6293,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Team Leader@Delta2";
+						description="Team Leader@Alpha 4";
 						isPlayable=1;
 					};
 					id=1179;
@@ -6241,7 +6355,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Machine Gunner (M249)";
+						description="Machine Gunner (M249)@Alpha 4";
 						isPlayable=1;
 					};
 					id=1180;
@@ -6290,7 +6404,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT (Carl Gustav)";
+						description="Heavy AT (Carl Gustav)@Alpha 4";
 						isPlayable=1;
 					};
 					id=1182;
@@ -6365,7 +6479,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Rifleman";
+						description="Rifleman@Alpha 4";
 						isPlayable=1;
 					};
 					id=1183;
@@ -6414,7 +6528,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="HAT Ammo Carrier";
+						description="HAT Ammo Carrier@Alpha 4";
 						isPlayable=1;
 					};
 					id=1361;
@@ -6479,8 +6593,26 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Alpha 4""];";
 			};
 			id=1173;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="B Alpha 4";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item21
 		{
@@ -6502,8 +6634,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="[this, 'Foxtrot'] call BC_setup_fnc_registerDynamicGroup;";
-						description="Engineer-Commander@Foxtrot";
+						description="Engineer-Commander@Echo 2";
 						isPlayable=1;
 					};
 					id=1185;
@@ -6578,7 +6709,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Engineer";
+						description="Engineer@Echo 2";
 						isPlayable=1;
 					};
 					id=1186;
@@ -6640,7 +6771,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Engineer";
+						description="Engineer@Echo 2";
 						isPlayable=1;
 					};
 					id=1187;
@@ -6705,23 +6836,12 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Echo 2""];";
 			};
 			id=1184;
 			class CustomAttributes
 			{
 				class Attribute0
-				{
-					property="TFAR_freq_lr";
-					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-						};
-					};
-				};
-				class Attribute1
 				{
 					property="TFAR_freq_sr";
 					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -6729,11 +6849,38 @@ class Mission
 					{
 						class data
 						{
-							singleType="ARRAY";
+							singleType="STRING";
+							value="[]";
 						};
 					};
 				};
-				nAttributes=2;
+				class Attribute1
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="B Echo 2";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="TFAR_freq_lr";
+					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[]";
+						};
+					};
+				};
+				nAttributes=3;
 			};
 		};
 		class Item22
@@ -6756,8 +6903,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="call{[this, 'Golf'] call BC_setup_fnc_registerDynamicGroup;}";
-						description="Engineer-Commander@Golf";
+						description="Engineer-Commander@Echo 1";
 						isPlayable=1;
 					};
 					id=1189;
@@ -6832,7 +6978,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Engineer";
+						description="Engineer@Echo 1";
 						isPlayable=1;
 					};
 					id=1190;
@@ -6894,7 +7040,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Engineer";
+						description="Engineer@Echo 1";
 						isPlayable=1;
 					};
 					id=1191;
@@ -6959,23 +7105,12 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Echo 1""];";
 			};
 			id=1188;
 			class CustomAttributes
 			{
 				class Attribute0
-				{
-					property="TFAR_freq_lr";
-					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-						};
-					};
-				};
-				class Attribute1
 				{
 					property="TFAR_freq_sr";
 					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -6983,11 +7118,38 @@ class Mission
 					{
 						class data
 						{
-							singleType="ARRAY";
+							singleType="STRING";
+							value="[]";
 						};
 					};
 				};
-				nAttributes=2;
+				class Attribute1
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="B Echo 1";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="TFAR_freq_lr";
+					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[]";
+						};
+					};
+				};
+				nAttributes=3;
 			};
 		};
 		class Item23
@@ -7010,8 +7172,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="call{[this, 'Hotel'] call BC_setup_fnc_registerDynamicGroup;}";
-						description="Engineer-Commander@Hotel";
+						description="Engineer-Commander@Echo 3";
 						isPlayable=1;
 					};
 					id=1193;
@@ -7086,7 +7247,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Engineer";
+						description="Engineer@Echo 3";
 						isPlayable=1;
 					};
 					id=1194;
@@ -7148,7 +7309,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Engineer";
+						description="Engineer@Echo 3";
 						isPlayable=1;
 					};
 					id=1195;
@@ -7213,23 +7374,12 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Echo 3""];";
 			};
 			id=1192;
 			class CustomAttributes
 			{
 				class Attribute0
-				{
-					property="TFAR_freq_lr";
-					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-						};
-					};
-				};
-				class Attribute1
 				{
 					property="TFAR_freq_sr";
 					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -7237,11 +7387,38 @@ class Mission
 					{
 						class data
 						{
-							singleType="ARRAY";
+							singleType="STRING";
+							value="[]";
 						};
 					};
 				};
-				nAttributes=2;
+				class Attribute1
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="B Echo 3";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="TFAR_freq_lr";
+					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[]";
+						};
+					};
+				};
+				nAttributes=3;
 			};
 		};
 		class Item24
@@ -7264,9 +7441,8 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="[this, 'Command'] call BC_setup_fnc_registerDynamicGroup;";
 						name="opfor_teamlead";
-						description="Commander (must be selected) @Command";
+						description="Commander (must be selected)@Alpha 10";
 						isPlayer=1;
 						isPlayable=1;
 					};
@@ -7330,7 +7506,7 @@ class Mission
 					{
 						rank="CAPTAIN";
 						name="opfor_assistant";
-						description="Assistant Commander";
+						description="Assistant Commander@Alpha 10";
 						isPlayable=1;
 					};
 					id=1241;
@@ -7339,8 +7515,26 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Alpha 10""];";
 			};
 			id=1239;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="O Alpha 10";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item25
 		{
@@ -7362,8 +7556,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="[this, 'Alpha'] call BC_setup_fnc_registerDynamicGroup;";
-						description="Squad Leader@Alpha";
+						description="Squad Leader@Alpha 1";
 						isPlayable=1;
 					};
 					id=1243;
@@ -7425,7 +7618,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Squad Medic";
+						description="Squad Medic@Alpha 1";
 						isPlayable=1;
 					};
 					id=1244;
@@ -7444,7 +7637,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (PKP)";
+						description="Ammo Bearer (PKP)@Alpha 1";
 						isPlayable=1;
 					};
 					id=1245;
@@ -7519,7 +7712,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium Machine Gunner (PKP)";
+						description="Medium Machine Gunner (PKP)@Alpha 1";
 						isPlayable=1;
 					};
 					id=1246;
@@ -7568,7 +7761,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (RPG26)";
+						description="LAT-Specialist (RPG26)@Alpha 1";
 						isPlayable=1;
 					};
 					id=1247;
@@ -7643,7 +7836,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Team Leader@Alpha2";
+						description="Team Leader@Alpha 1";
 						isPlayable=1;
 					};
 					id=1248;
@@ -7705,7 +7898,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Light Machine Gunner (AKM)";
+						description="Light Machine Gunner (AKM)@Alpha 1";
 						isPlayable=1;
 					};
 					id=1249;
@@ -7754,7 +7947,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT-Specialist (RPG7)";
+						description="Heavy AT-Specialist (RPG7)@Alpha 1";
 						isPlayable=1;
 					};
 					id=1250;
@@ -7829,7 +8022,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Assistant Heavy AT (RPG7)";
+						description="Assistant Heavy AT (RPG7)@Alpha 1";
 						isPlayable=1;
 					};
 					id=1251;
@@ -7878,7 +8071,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Rifleman";
+						description="Rifleman@Alpha 1";
 						isPlayable=1;
 					};
 					id=1252;
@@ -7917,8 +8110,26 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Alpha 1""];";
 			};
 			id=1242;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="O Alpha 1";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item26
 		{
@@ -7940,8 +8151,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{[this, 'Bravo'] call BC_setup_fnc_registerDynamicGroup;}";
-						description="Squad Leader@Bravo";
+						description="Squad Leader@Alpha 2";
 						isPlayable=1;
 					};
 					id=1254;
@@ -8003,7 +8213,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Squad Medic";
+						description="Squad Medic@Alpha 2";
 						isPlayable=1;
 					};
 					id=1255;
@@ -8022,7 +8232,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (PKP)";
+						description="Ammo Bearer (PKP)@Alpha 2";
 						isPlayable=1;
 					};
 					id=1256;
@@ -8097,7 +8307,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium Machine Gunner (PKP)";
+						description="Medium Machine Gunner (PKP)@Alpha 2";
 						isPlayable=1;
 					};
 					id=1257;
@@ -8146,7 +8356,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (RPG26)";
+						description="LAT-Specialist (RPG26)@Alpha 2";
 						isPlayable=1;
 					};
 					id=1258;
@@ -8221,7 +8431,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Team Leader@Bravo2";
+						description="Team Leader@Alpha 2";
 						isPlayable=1;
 					};
 					id=1259;
@@ -8283,7 +8493,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Light Machine Gunner (AKM)";
+						description="Light Machine Gunner (AKM)@Alpha 2";
 						isPlayable=1;
 					};
 					id=1260;
@@ -8332,7 +8542,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT-Specialist (RPG7)";
+						description="Heavy AT-Specialist (RPG7)@Alpha 2";
 						isPlayable=1;
 					};
 					id=1261;
@@ -8407,7 +8617,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Assistant Heavy AT (RPG7)";
+						description="Assistant Heavy AT (RPG7)@Alpha 2";
 						isPlayable=1;
 					};
 					id=1262;
@@ -8456,7 +8666,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Rifleman";
+						description="Rifleman@Alpha 2";
 						isPlayable=1;
 					};
 					id=1263;
@@ -8495,8 +8705,26 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Alpha 2""];";
 			};
 			id=1253;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="O Alpha 2";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item27
 		{
@@ -8518,8 +8746,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{[this, 'Charlie'] call BC_setup_fnc_registerDynamicGroup;}";
-						description="Squad Leader@Charlie";
+						description="Squad Leader@Alpha 3";
 						isPlayable=1;
 					};
 					id=1265;
@@ -8581,7 +8808,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Squad Medic";
+						description="Squad Medic@Alpha 3";
 						isPlayable=1;
 					};
 					id=1266;
@@ -8600,7 +8827,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (PKP)";
+						description="Ammo Bearer (PKP)@Alpha 3";
 						isPlayable=1;
 					};
 					id=1267;
@@ -8675,7 +8902,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium Machine Gunner (PKP)";
+						description="Medium Machine Gunner (PKP)@Alpha 3";
 						isPlayable=1;
 					};
 					id=1268;
@@ -8724,7 +8951,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (RPG26)";
+						description="LAT-Specialist (RPG26)@Alpha 3";
 						isPlayable=1;
 					};
 					id=1269;
@@ -8799,7 +9026,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Team Leader@Charlie2";
+						description="Team Leader@Alpha 3";
 						isPlayable=1;
 					};
 					id=1270;
@@ -8861,7 +9088,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Light Machine Gunner (AKM)";
+						description="Light Machine Gunner (AKM)@Alpha 3";
 						isPlayable=1;
 					};
 					id=1271;
@@ -8910,7 +9137,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT-Specialist (RPG7)";
+						description="Heavy AT-Specialist (RPG7)@Alpha 3";
 						isPlayable=1;
 					};
 					id=1272;
@@ -8985,7 +9212,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Assistant Heavy AT (RPG7)";
+						description="Assistant Heavy AT (RPG7)@Alpha 3";
 						isPlayable=1;
 					};
 					id=1273;
@@ -9034,7 +9261,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Rifleman";
+						description="Rifleman@Alpha 3";
 						isPlayable=1;
 					};
 					id=1274;
@@ -9073,8 +9300,26 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Alpha 3""];";
 			};
 			id=1264;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="O Alpha 3";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item28
 		{
@@ -9096,8 +9341,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="call{[this, 'Delta'] call BC_setup_fnc_registerDynamicGroup;}";
-						description="Squad Leader@Delta";
+						description="Squad Leader@Alpha 4";
 						isPlayable=1;
 					};
 					id=1276;
@@ -9159,7 +9403,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Squad Medic";
+						description="Squad Medic@Alpha 4";
 						isPlayable=1;
 					};
 					id=1277;
@@ -9178,7 +9422,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (PKP)";
+						description="Ammo Bearer (PKP)@Alpha 4";
 						isPlayable=1;
 					};
 					id=1278;
@@ -9253,7 +9497,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium Machine Gunner (PKP)";
+						description="Medium Machine Gunner (PKP)@Alpha 4";
 						isPlayable=1;
 					};
 					id=1279;
@@ -9302,7 +9546,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (RPG26)";
+						description="LAT-Specialist (RPG26)@Alpha 4";
 						isPlayable=1;
 					};
 					id=1280;
@@ -9377,7 +9621,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						description="Team Leader@Delta2";
+						description="Team Leader@Alpha 4";
 						isPlayable=1;
 					};
 					id=1281;
@@ -9439,7 +9683,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Light Machine Gunner (AKM)";
+						description="Light Machine Gunner (AKM)@Alpha 4";
 						isPlayable=1;
 					};
 					id=1282;
@@ -9488,7 +9732,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT-Specialist (RPG7)";
+						description="Heavy AT-Specialist (RPG7)@Alpha 4";
 						isPlayable=1;
 					};
 					id=1283;
@@ -9563,7 +9807,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Assistant Heavy AT (RPG7)";
+						description="Assistant Heavy AT (RPG7)@Alpha 4";
 						isPlayable=1;
 					};
 					id=1284;
@@ -9612,7 +9856,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Rifleman";
+						description="Rifleman@Alpha 4";
 						isPlayable=1;
 					};
 					id=1285;
@@ -9651,8 +9895,26 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Alpha 4""];";
 			};
 			id=1275;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="O Alpha 4";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item29
 		{
@@ -9674,8 +9936,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="[this, 'Foxtrot'] call BC_setup_fnc_registerDynamicGroup;";
-						description="Engineer-Commander@Foxtrot";
+						description="Engineer-Commander@Echo 3";
 						isPlayable=1;
 					};
 					id=1287;
@@ -9737,7 +9998,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Engineer";
+						description="Engineer@Echo 3";
 						isPlayable=1;
 					};
 					id=1288;
@@ -9786,7 +10047,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Engineer";
+						description="Engineer@Echo 3";
 						isPlayable=1;
 					};
 					id=1289;
@@ -9825,23 +10086,12 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Echo 3""];";
 			};
 			id=1286;
 			class CustomAttributes
 			{
 				class Attribute0
-				{
-					property="TFAR_freq_lr";
-					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-						};
-					};
-				};
-				class Attribute1
 				{
 					property="TFAR_freq_sr";
 					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -9849,11 +10099,38 @@ class Mission
 					{
 						class data
 						{
-							singleType="ARRAY";
+							singleType="STRING";
+							value="[]";
 						};
 					};
 				};
-				nAttributes=2;
+				class Attribute1
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="O Echo 3";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="TFAR_freq_lr";
+					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[]";
+						};
+					};
+				};
+				nAttributes=3;
 			};
 		};
 		class Item30
@@ -9876,8 +10153,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="call{[this, 'Golf'] call BC_setup_fnc_registerDynamicGroup;}";
-						description="Engineer-Commander@Golf";
+						description="Engineer-Commander@Echo 2";
 						isPlayable=1;
 					};
 					id=1291;
@@ -9939,7 +10215,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Engineer";
+						description="Engineer@Echo 2";
 						isPlayable=1;
 					};
 					id=1292;
@@ -9988,7 +10264,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Engineer";
+						description="Engineer@Echo 2";
 						isPlayable=1;
 					};
 					id=1293;
@@ -10027,8 +10303,26 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Echo 2""];";
 			};
 			id=1290;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="O Echo 2";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item31
 		{
@@ -10050,8 +10344,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="[this, 'Hotel'] call BC_setup_fnc_registerDynamicGroup;";
-						description="Engineer-Commander@Hotel";
+						description="Engineer-Commander@Echo 1";
 						isPlayable=1;
 					};
 					id=1295;
@@ -10113,7 +10406,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Engineer";
+						description="Engineer@Echo 1";
 						isPlayable=1;
 					};
 					id=1296;
@@ -10162,7 +10455,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Engineer";
+						description="Engineer@Echo 1";
 						isPlayable=1;
 					};
 					id=1297;
@@ -10201,23 +10494,12 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Echo 1""];";
 			};
 			id=1294;
 			class CustomAttributes
 			{
 				class Attribute0
-				{
-					property="TFAR_freq_lr";
-					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
-					class Value
-					{
-						class data
-						{
-							singleType="ARRAY";
-						};
-					};
-				};
-				class Attribute1
 				{
 					property="TFAR_freq_sr";
 					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; } else { _value = [str _value,8,512,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_sr',_value,true]; }";
@@ -10225,11 +10507,38 @@ class Mission
 					{
 						class data
 						{
-							singleType="ARRAY";
+							singleType="STRING";
+							value="[]";
 						};
 					};
 				};
-				nAttributes=2;
+				class Attribute1
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="O Echo 1";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="TFAR_freq_lr";
+					expression="if (_value isEqualTo '' || _value isEqualTo []) exitWith {}; if (_value isEqualType '') then { _value = [_value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; } else { _value = [str _value,9,87,30,10] call tfar_fnc_parseFrequenciesInput; _this setVariable ['TFAR_freq_lr',_value,true]; }";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="[]";
+						};
+					};
+				};
+				nAttributes=3;
 			};
 		};
 		class Item32
@@ -10358,9 +10667,9 @@ class Mission
 					flags=7;
 					class Attributes
 					{
-						init="call{this allowDamage false;}";
+						init="this allowDamage false;";
 						name="referee";
-						description="Referee";
+						description="Referee@Admin";
 						isPlayable=1;
 						class Inventory
 						{
@@ -10411,8 +10720,26 @@ class Mission
 			};
 			class Attributes
 			{
+				init="this setGroupId [""Admin""];";
 			};
 			id=1624;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="groupID";
+					expression="                            if (isNil 'CBA_fnc_setCallsign') then {                                _this setGroupID [_value];                            } else {                                [_this, _value] call CBA_fnc_setCallsign;                            };";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="C Admin";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item35
 		{
