@@ -28,7 +28,6 @@ class BC_setup {
         class getHighestRankOfSide;
         class getIslandCfgEntry {};
         class initialSpawnServer;
-        class registerDynamicGroup;
         class removeFuelStations { postInit = 1; };
         class showLeaderInformation;
         class teleportAI;

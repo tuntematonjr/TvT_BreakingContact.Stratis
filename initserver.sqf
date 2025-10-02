@@ -163,8 +163,6 @@ call setCustomWeather;
 // set time acceleration
 setTimeMultiplier TIME_ACCELERATION;
 
-["Initialize", [true]] call BIS_fnc_dynamicGroups;
-
 MISSION_STARTED = false;
 publicVariable "MISSION_STARTED";
 
