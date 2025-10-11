@@ -11,8 +11,8 @@
 /// OPFOR
 #include "factions\nvaGM.hpp"
 #include "factions\russia.hpp"
-#include "factions\russiaW.hpp"
 #include "factions\russiaTank.hpp"
 #include "factions\mudscha.hpp"
 #include "factions\rebels.hpp"
 #include "factions\PAVN.hpp"
+#include "factions\russiaW.hpp"
