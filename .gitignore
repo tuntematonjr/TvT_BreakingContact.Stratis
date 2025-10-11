@@ -46,3 +46,4 @@ Temporary Items
 node_modules
 package.json
 package-lock.json
+.github/copilot-instructions.md
