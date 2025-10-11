@@ -1,15 +1,15 @@
-class USA {
+class FDFW {
     class AllUnits {
-        primaryWeapon = "rhs_weap_m4a1_carryhandle";
+        primaryWeapon = "KAR_FDF_SCAR_L";
         primaryWeaponMagazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
         primaryWeaponPointer = "acc_flashlight";
         primaryWeaponOptics = "rhsusf_acc_eotech_xps3";
         handgunWeapon = "rhsusf_weap_m9";
         handgunWeaponMagazine = "rhsusf_mag_15Rnd_9x19_JHP";
-        uniform = "rhs_uniform_FROG01_wd";
-        vest = "rhsusf_mbav_rifleman";
-        backpack = "rhsusf_assault_eagleaiii_coy";
-        headgear = "rhsusf_lwh_helmet_marpatwd_headset_blk2";
+        uniform = "KAR_FDF_GORKA_W";
+        vest = "KAR_FDF_M05_TST_ARM";
+        backpack = "KAR_FDF_Kitbag_02";
+        headgear = "KAR_FDF_W_Opscore_02_C";
         binoculars = "Binocular";
         map = "ItemMap";
         radio = "TFAR_anprc152";
@@ -40,7 +40,7 @@ class USA {
 
         // Engineer
         class Engineer_F: Soldier_F{
-            backpack = "B_Kitbag_cbr";
+            backpack = "KAR_FDF_Kitbag_02";
             addItemsToBackpack[] = {
                 "toolkit",
                 "ACE_EntrenchingTool",
@@ -69,22 +69,22 @@ class USA {
 
         // Medium MG (M240B)
         class HeavyGunner_F: Soldier_F {
-            primaryWeapon = "rhs_weap_m240B";
-            primaryWeaponMagazine = "rhsusf_100Rnd_762x51_m62_tracer";
+            primaryWeapon = "rhs_weap_pkp";
+            primaryWeaponMagazine = "rhs_100Rnd_762x54mmR_green";
             addItemsToVest[] = {
-                LIST_2("rhsusf_100Rnd_762x51_m62_tracer"),
+                LIST_2("rhs_100Rnd_762x54mmR_green"),
                 LIST_2("HandGrenade"),
                 LIST_2("SmokeShell")
             };
             addItemsToBackpack[] = {
-                LIST_3("rhsusf_100Rnd_762x51_m62_tracer")
+                LIST_3("rhs_100Rnd_762x54mmR_green")
             };
         };
 
         // Ammo Bearer (M240B)
         class Soldier_A_F: Soldier_F {
             addItemsToBackpack[] = {
-                LIST_6("rhsusf_100Rnd_762x51_m62_tracer")
+                LIST_6("rhs_100Rnd_762x54mmR_green")
             };
         };
 
@@ -141,7 +141,7 @@ class USA {
 
         // Medic
         class Medic_F: Soldier_F {
-            backpack = "B_Kitbag_cbr";
+            backpack = "KAR_FDF_Kitbag_02";
             addItemsToBackpack[] = {
                 BASE_MEDIC,
                 LIST_5("SmokeShell")
@@ -151,11 +151,10 @@ class USA {
         // TeamLeader
         class Soldier_TL_F: Soldier_F {
             gps = "ItemGPS";
-            primaryWeapon = "rhs_weap_m4a1_carryhandle_m203S";
-            underBarrelMagazine = "1Rnd_Smoke_Grenade_shell";
+            handgunWeapon = "rhs_weap_M320";
+            handgunWeaponMagazine = "1Rnd_Smoke_Grenade_shell";
             addItemsToUniform[] = {
                 BASE_MEDICAL,
-                LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
                 "ACE_key_west",
                 "ACE_MapTools",
                 "ACE_Flashlight_XL50"

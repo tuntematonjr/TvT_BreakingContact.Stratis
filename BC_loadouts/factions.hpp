@@ -34,3 +34,6 @@
 #include "factions\referee.hpp"
 
 #include "factions\PAVN.hpp"
+
+#include "factions\fdfW.hpp"
+#include "factions\russiaW.hpp"

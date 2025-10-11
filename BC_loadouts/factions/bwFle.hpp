@@ -34,7 +34,7 @@ class bwFle {
             addItemsToVest[] = {
                 LIST_6("rhs_mag_30Rnd_556x45_Mk318_Stanag"),
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
-                LIST_2("rhs_mag_m67"),
+                LIST_2("HandGrenade"),
                 LIST_2("SmokeShell")
             };
         };
@@ -62,7 +62,7 @@ class bwFle {
                 "ACE_Flashlight_XL50"
             };
             addItemsToVest[] = {
-                "rhs_mag_m67",
+                "HandGrenade",
                 "SmokeShell",
                 "rhsusf_100Rnd_762x51_m62_tracer",
                 "rhsusf_50Rnd_762x51"
@@ -85,7 +85,7 @@ class bwFle {
             };
             addItemsToVest[] = {
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
-                "rhs_mag_m67",
+                "HandGrenade",
                 LIST_2("SmokeShell"),
                 "rhsusf_200rnd_556x45_M855_mixed_box"
             };
@@ -112,7 +112,7 @@ class bwFle {
             addItemsToVest[] = {
                 LIST_8("rhs_mag_30Rnd_556x45_Mk318_Stanag"),
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
-                LIST_2("rhs_mag_m67"),
+                LIST_2("HandGrenade"),
                 LIST_2("SmokeShell")
             };
             addItemsToBackpack[] = {
@@ -192,7 +192,7 @@ class bwFle {
             };
             addItemsToVest[] = {
                 LIST_2("rhsusf_mag_15Rnd_9x19_JHP"),
-                LIST_2("rhs_mag_m67"),
+                LIST_2("HandGrenade"),
                 LIST_2("SmokeShell"),
                 LIST_3("rhs_mag_30Rnd_556x45_Mk318_Stanag"),
                 LIST_5("1Rnd_SmokeGreen_Grenade_shell"),
