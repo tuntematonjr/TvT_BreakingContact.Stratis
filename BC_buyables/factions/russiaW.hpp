@@ -1,7 +1,7 @@
 //a different set of buyables
 class RussiaW {
     side = "Opfor";
-    loadout = "russiaW";
+    loadout = "russiaw";
     mode = "conquer";
     
     // needs to be in every faction

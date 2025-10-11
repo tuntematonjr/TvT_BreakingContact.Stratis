@@ -1,4 +1,4 @@
-class RussiaW {
+class russiaw {
     class AllUnits {
         primaryWeapon = "arifle_RWR_ak74m_npz";
         primaryWeaponMagazine = "30Rnd_545x39_7n10_RWR";
