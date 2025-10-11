@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1831.1323,70.70903,5651.0806};
-		dir[]={-0.1560999,-0.50569481,-0.84857225};
-		up[]={-0.091503747,0.86267364,-0.49742302};
-		aside[]={-0.98357922,1.0514632e-06,0.18093753};
+		pos[]={1007.0643,644.51648,5297.8081};
+		dir[]={0.71780491,-0.68884677,0.10175806};
+		up[]={0.6820454,0.72487968,0.096687615};
+		aside[]={0.1403663,3.6347774e-07,-0.99014074};
 	};
 };
 binarizationWanted=0;
@@ -169,6 +169,8 @@ randomSeed=6764181;
 class ScenarioData
 {
 	author="nomisum";
+	saving=0;
+	disabledAI=1;
 	wreckRemovalMaxTime=3600;
 };
 class CustomAttributes
@@ -211,7 +213,7 @@ class CustomAttributes
 				class data
 				{
 					singleType="SCALAR";
-					value=15;
+					value=5;
 				};
 			};
 		};
@@ -295,7 +297,36 @@ class CustomAttributes
 		};
 		nAttributes=9;
 	};
-	class Category1
+	class Category2
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="None";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+	class Category3
 	{
 		name="Scenario";
 		class Attribute0
@@ -4439,7 +4470,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (M240B)@Alpha 1";
+						description="Ammo Bearer (MG)@Alpha 1";
 						isPlayable=1;
 					};
 					id=1098;
@@ -4488,7 +4519,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium MG (M240B)@Alpha 1";
+						description="Medium Machine Gunner@Alpha 1";
 						isPlayable=1;
 					};
 					id=1099;
@@ -4537,7 +4568,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (M72A7)@Alpha 1";
+						description="LAT-Specialist@Alpha 1";
 						isPlayable=1;
 					};
 					id=1100;
@@ -4648,7 +4679,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Machine Gunner (M249)@Alpha 1";
+						description="Light Machine Gunner@Alpha 1";
 						isPlayable=1;
 					};
 					id=1102;
@@ -4697,7 +4728,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT (Carl Gustav)@Alpha 1";
+						description="Heavy AT-Specialist@Alpha 1";
 						isPlayable=1;
 					};
 					id=1104;
@@ -4821,7 +4852,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="HAT Ammo Carrier@Alpha 1";
+						description="Assistant Heavy AT@Alpha 1";
 						isPlayable=1;
 					};
 					id=1358;
@@ -5000,7 +5031,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1527.6357,5.5014391,5065.2603};
+						position[]={1527.636,5.5014391,5065.2598};
 						angles[]={0,2.7052603,0};
 					};
 					side="West";
@@ -5008,7 +5039,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (M240B)@Alpha 2";
+						description="Ammo Bearer (MG)@Alpha 2";
 						isPlayable=1;
 					};
 					id=1109;
@@ -5057,7 +5088,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium MG (M240B)@Alpha 2";
+						description="Medium Machine Gunner@Alpha 2";
 						isPlayable=1;
 					};
 					id=1110;
@@ -5106,7 +5137,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (M72A7)@Alpha 2";
+						description="LAT-Specialist@Alpha 2";
 						isPlayable=1;
 					};
 					id=1111;
@@ -5217,7 +5248,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Machine Gunner (M249)@Alpha 2";
+						description="Light Machine Gunner@Alpha 2";
 						isPlayable=1;
 					};
 					id=1113;
@@ -5266,7 +5297,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT (Carl Gustav)@Alpha 2";
+						description="Heavy AT-Specialist@Alpha 2";
 						isPlayable=1;
 					};
 					id=1115;
@@ -5390,7 +5421,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="HAT Ammo Carrier@Alpha 2";
+						description="Assistant Heavy AT@Alpha 2";
 						isPlayable=1;
 					};
 					id=1359;
@@ -5577,7 +5608,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (M240B)@Alpha 3";
+						description="Ammo Bearer (MG)@Alpha 3";
 						isPlayable=1;
 					};
 					id=1120;
@@ -5626,7 +5657,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium MG (M240B)@Alpha 3";
+						description="Medium Machine Gunner@Alpha 3";
 						isPlayable=1;
 					};
 					id=1121;
@@ -5675,7 +5706,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (M72A7)@Alpha 3";
+						description="LAT-Specialist@Alpha 3";
 						isPlayable=1;
 					};
 					id=1122;
@@ -5786,7 +5817,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Machine Gunner (M249)@Alpha 3";
+						description="Light Machine Gunner@Alpha 3";
 						isPlayable=1;
 					};
 					id=1124;
@@ -5835,7 +5866,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT (Carl Gustav)@Alpha 3";
+						description="Heavy AT-Specialist@Alpha 3";
 						isPlayable=1;
 					};
 					id=1126;
@@ -5959,7 +5990,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="HAT Ammo Carrier@Alpha 3";
+						description="Assistant Heavy AT@Alpha 3";
 						isPlayable=1;
 					};
 					id=1360;
@@ -6119,8 +6150,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1536.1025,5.5014391,5088.2314};
-						angles[]={0,5.51016,0};
+						position[]={1536.103,5.5014391,5088.2319};
+						angles[]={0,5.5101619,0};
 					};
 					side="West";
 					flags=4;
@@ -6132,13 +6163,43 @@ class Mission
 					};
 					id=1175;
 					type="B_medic_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male07ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1532.7019,5.5014391,5089.4551};
+						position[]={1532.702,5.5014391,5089.4546};
 						angles[]={0,2.7052603,0};
 					};
 					side="West";
@@ -6146,7 +6207,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (M240B)@Alpha 4";
+						description="Ammo Bearer (MG)@Alpha 4";
 						isPlayable=1;
 					};
 					id=1176;
@@ -6195,7 +6256,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium MG (M240B)@Alpha 4";
+						description="Medium Machine Gunner@Alpha 4";
 						isPlayable=1;
 					};
 					id=1177;
@@ -6244,7 +6305,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (M72A7)@Alpha 4";
+						description="LAT-Specialist@Alpha 4";
 						isPlayable=1;
 					};
 					id=1178;
@@ -6355,7 +6416,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Machine Gunner (M249)@Alpha 4";
+						description="Light Machine Gunner@Alpha 4";
 						isPlayable=1;
 					};
 					id=1180;
@@ -6404,7 +6465,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT (Carl Gustav)@Alpha 4";
+						description="Heavy AT-Specialist@Alpha 4";
 						isPlayable=1;
 					};
 					id=1182;
@@ -6528,7 +6589,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="HAT Ammo Carrier@Alpha 4";
+						description="Assistant Heavy AT@Alpha 4";
 						isPlayable=1;
 					};
 					id=1361;
@@ -7106,6 +7167,7 @@ class Mission
 			class Attributes
 			{
 				init="this setGroupId [""Echo 1""];";
+				combatMode="BLUE";
 			};
 			id=1188;
 			class CustomAttributes
@@ -7637,7 +7699,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (PKP)@Alpha 1";
+						description="Ammo Bearer (MG)@Alpha 1";
 						isPlayable=1;
 					};
 					id=1245;
@@ -7704,7 +7766,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1777.8617,5.5014391,5991.3022};
+						position[]={1777.8621,5.5014391,5991.3018};
 						angles[]={0,2.8504543,0};
 					};
 					side="East";
@@ -7712,7 +7774,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium Machine Gunner (PKP)@Alpha 1";
+						description="Medium Machine Gunner@Alpha 1";
 						isPlayable=1;
 					};
 					id=1246;
@@ -7761,7 +7823,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (RPG26)@Alpha 1";
+						description="LAT-Specialist@Alpha 1";
 						isPlayable=1;
 					};
 					id=1247;
@@ -7890,7 +7952,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1790.9718,5.5014391,5988.8271};
+						position[]={1790.972,5.5014391,5988.8267};
 						angles[]={0,2.8504543,0};
 					};
 					side="East";
@@ -7898,7 +7960,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Light Machine Gunner (AKM)@Alpha 1";
+						description="Light Machine Gunner@Alpha 1";
 						isPlayable=1;
 					};
 					id=1249;
@@ -7947,7 +8009,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT-Specialist (RPG7)@Alpha 1";
+						description="Heavy AT-Specialist@Alpha 1";
 						isPlayable=1;
 					};
 					id=1250;
@@ -8014,7 +8076,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1796.9008,5.5014391,5988.1963};
+						position[]={1796.901,5.5014391,5988.1958};
 						angles[]={0,2.8504543,0};
 					};
 					side="East";
@@ -8022,7 +8084,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Assistant Heavy AT (RPG7)@Alpha 1";
+						description="Assistant Heavy AT@Alpha 1";
 						isPlayable=1;
 					};
 					id=1251;
@@ -8232,7 +8294,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (PKP)@Alpha 2";
+						description="Ammo Bearer (MG)@Alpha 2";
 						isPlayable=1;
 					};
 					id=1256;
@@ -8307,7 +8369,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium Machine Gunner (PKP)@Alpha 2";
+						description="Medium Machine Gunner@Alpha 2";
 						isPlayable=1;
 					};
 					id=1257;
@@ -8356,7 +8418,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (RPG26)@Alpha 2";
+						description="LAT-Specialist@Alpha 2";
 						isPlayable=1;
 					};
 					id=1258;
@@ -8493,7 +8555,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Light Machine Gunner (AKM)@Alpha 2";
+						description="Light Machine Gunner@Alpha 2";
 						isPlayable=1;
 					};
 					id=1260;
@@ -8542,7 +8604,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT-Specialist (RPG7)@Alpha 2";
+						description="Heavy AT-Specialist@Alpha 2";
 						isPlayable=1;
 					};
 					id=1261;
@@ -8617,7 +8679,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Assistant Heavy AT (RPG7)@Alpha 2";
+						description="Assistant Heavy AT@Alpha 2";
 						isPlayable=1;
 					};
 					id=1262;
@@ -8827,7 +8889,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (PKP)@Alpha 3";
+						description="Ammo Bearer (MG)@Alpha 3";
 						isPlayable=1;
 					};
 					id=1267;
@@ -8902,7 +8964,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium Machine Gunner (PKP)@Alpha 3";
+						description="Medium Machine Gunner@Alpha 3";
 						isPlayable=1;
 					};
 					id=1268;
@@ -8951,7 +9013,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (RPG26)@Alpha 3";
+						description="LAT-Specialist@Alpha 3";
 						isPlayable=1;
 					};
 					id=1269;
@@ -9088,7 +9150,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Light Machine Gunner (AKM)@Alpha 3";
+						description="Light Machine Gunner@Alpha 3";
 						isPlayable=1;
 					};
 					id=1271;
@@ -9137,7 +9199,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT-Specialist (RPG7)@Alpha 3";
+						description="Heavy AT-Specialist@Alpha 3";
 						isPlayable=1;
 					};
 					id=1272;
@@ -9212,7 +9274,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Assistant Heavy AT (RPG7)@Alpha 3";
+						description="Assistant Heavy AT@Alpha 3";
 						isPlayable=1;
 					};
 					id=1273;
@@ -9395,8 +9457,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1791.4347,5.5014391,6038.3213};
-						angles[]={0,6.1167812,0};
+						position[]={1791.4351,5.5014391,6038.3208};
+						angles[]={0,6.1167855,0};
 					};
 					side="East";
 					flags=4;
@@ -9408,6 +9470,36 @@ class Mission
 					};
 					id=1277;
 					type="O_medic_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.99000001;
+								};
+							};
+						};
+						nAttributes=2;
+					};
 				};
 				class Item2
 				{
@@ -9422,7 +9514,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Ammo Bearer (PKP)@Alpha 4";
+						description="Ammo Bearer (MG)@Alpha 4";
 						isPlayable=1;
 					};
 					id=1278;
@@ -9497,7 +9589,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Medium Machine Gunner (PKP)@Alpha 4";
+						description="Medium Machine Gunner@Alpha 4";
 						isPlayable=1;
 					};
 					id=1279;
@@ -9538,7 +9630,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={1789.7977,5.5014391,6039.3589};
+						position[]={1789.798,5.5014391,6039.3589};
 						angles[]={0,2.8504543,0};
 					};
 					side="East";
@@ -9546,7 +9638,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="LAT-Specialist (RPG26)@Alpha 4";
+						description="LAT-Specialist@Alpha 4";
 						isPlayable=1;
 					};
 					id=1280;
@@ -9683,7 +9775,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Light Machine Gunner (AKM)@Alpha 4";
+						description="Light Machine Gunner@Alpha 4";
 						isPlayable=1;
 					};
 					id=1282;
@@ -9732,7 +9824,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						description="Heavy AT-Specialist (RPG7)@Alpha 4";
+						description="Heavy AT-Specialist@Alpha 4";
 						isPlayable=1;
 					};
 					id=1283;
@@ -9807,7 +9899,7 @@ class Mission
 					class Attributes
 					{
 						rank="CORPORAL";
-						description="Assistant Heavy AT (RPG7)@Alpha 4";
+						description="Assistant Heavy AT@Alpha 4";
 						isPlayable=1;
 					};
 					id=1284;
