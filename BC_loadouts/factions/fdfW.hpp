@@ -3,7 +3,7 @@ class FDFW {
         primaryWeapon = "KAR_FDF_SCAR_L";
         primaryWeaponMagazine = "rhs_mag_30Rnd_556x45_M855A1_Stanag";
         primaryWeaponPointer = "acc_flashlight";
-        primaryWeaponOptics = "rhsusf_acc_eotech_xps3";
+        primaryWeaponOptics = "rhsusf_acc_T1_high";
         handgunWeapon = "rhsusf_weap_m9";
         handgunWeaponMagazine = "rhsusf_mag_15Rnd_9x19_JHP";
         uniform = "KAR_FDF_GORKA_W";

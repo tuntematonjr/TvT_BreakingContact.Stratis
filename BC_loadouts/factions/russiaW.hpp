@@ -4,7 +4,7 @@ class russiaw {
         primaryWeaponMagazine = "30Rnd_545x39_7n10_RWR";
         primaryWeaponMuzzle = "rhs_acc_dtk1";
         primaryWeaponPointer = "rhs_acc_2dpZenit";
-        primaryWeaponOptics = "rhs_acc_1p87";
+        primaryWeaponOptics = "rhs_acc_ekp8_18";
         handgunWeapon = "rhs_weap_pya";
         handgunWeaponMagazine = "rhs_mag_9x19_17";
         uniform = "U_O_RWR_Overall_gloves";

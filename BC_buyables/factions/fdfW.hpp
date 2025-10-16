@@ -40,7 +40,6 @@ class fdfW {
             vehicleInit = "[[],[]]";
         };
 
-
         class KAR_FDF_SISU_COV {
             displayName = "SISU Covered";
             description = "Covered Truck. Carries a lot of stuff.";
@@ -68,7 +67,7 @@ class fdfW {
     class Recon {
         displayName = "Recon";
         kindOf = "Vehicles";
-        maxBuyCount = 5;
+        maxBuyCount = 4;
         minPlayerCount = 20;
 
         class RHS_MELB_H6M {
@@ -123,6 +122,18 @@ class fdfW {
             stock = 1;
             code = "(_this select 0) addItemCargoGlobal ['ACE_NVG_Wide',2];(_this select 0) addItemCargoGlobal ['ItemGPS',1];[(_this select 0)] call ace_fastroping_fnc_equipFRIES;[(_this select 0)] call BC_setup_fnc_fuelDrain;";
             spawnEmpty = 1;
+            vehicleInit = "[[],[]]";
+        };
+
+        class KAR_FDF_RG32_KRKK {
+            displayName = "RG-32M KrKK";
+            description = "5 seats.";
+            price = 10;
+            stock = 2;
+            spawnEmpty = 1;
+            wheelCargo = 4;
+            condition = "true";
+            code = "[(_this select 0), ['rhs_olive',1], ['hide_ogpkover',0,'hide_ogpknet',0,'hide_ogpkbust',0,'hide_rhino',1,'DoorLF',0,'DoorRF',0,'DoorLB',0,'DoorRB',0,'DUKE_Hide',1,'hide_spare',0]] call BIS_fnc_initVehicle;";
             vehicleInit = "[[],[]]";
         };
     };

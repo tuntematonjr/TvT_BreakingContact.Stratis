@@ -69,9 +69,9 @@ class RussiaW {
             vehicleInit = "[[],[]]";
         };        
         
-        class RWR_BRDM2_camo {
-            displayName = "BRDM-2 (Winter)";
-            description = "Armed version of BRDM2.";
+        class RWR_BRDM2_HQ_camo {
+            displayName = "BRDM-2HQ (Winter)";
+            description = "Armed with pkm, good for recon and command.";
             stock = 1;
             price = 10;
             spawnEmpty = 1;
@@ -98,6 +98,17 @@ class RussiaW {
             condition = "true";
             code = "[(_this select 0),['RWR_winter',1],['crate_l1_unhide',1,'crate_l2_unhide',1,'crate_l3_unhide',1,'crate_l4_unhide',1,'crate_r1_unhide',1,'crate_r2_unhide',1,'crate_r3_unhide',1,'crate_r4_unhide',1,'water_1_unhide',1,'water_2_unhide',1,'wheel_1_unhide',1,'wheel_2_unhide',1]] call BIS_fnc_initVehicle;"
             vehicleInit = "[[],[]]";
+        };        
+        
+        class RWR_BRDM2_camo {
+            displayName = "BRDM-2 (Winter)";
+            description = "Armed version of BRDM2.";
+            stock = 1;
+            price = 10;
+            spawnEmpty = 1;
+            wheelCargo = 2;
+            condition = "true";
+            vehicleInit = "[[], []]";
         };
     };
 
