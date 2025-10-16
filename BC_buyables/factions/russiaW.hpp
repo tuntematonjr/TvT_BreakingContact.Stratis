@@ -52,7 +52,6 @@ class RussiaW {
         };
     };
 
-
     class Recon {
         displayName = "Recon";
         kindOf = "Vehicles";
@@ -103,32 +102,32 @@ class RussiaW {
     };
 
 
-    class Armor {
-        displayName = "Armor";
-        kindOf = "Vehicles";
-        maxBuyCount = 1;
-        minPlayerCount = 60;
+    // class Armor {
+    //     displayName = "Armor";
+    //     kindOf = "Vehicles";
+    //     maxBuyCount = 1;
+    //     minPlayerCount = 60;
 
-        // class rhs_t80bvk {
-        //     displayName = "T80-BVK";
-        //     description = "Heavy tank, best vehicle you can get.";
-        //     stock = 1;
-        //     spawnEmpty = 1;
-        //     trackCargo = 2;
-        //     condition = "true";
-        //     vehicleInit = "[['standard',1], ['hide_com_shield',1,'sightElevationAPFSDS',0]]";
-        // };
+    //     // class rhs_t80bvk {
+    //     //     displayName = "T80-BVK";
+    //     //     description = "Heavy tank, best vehicle you can get.";
+    //     //     stock = 1;
+    //     //     spawnEmpty = 1;
+    //     //     trackCargo = 2;
+    //     //     condition = "true";
+    //     //     vehicleInit = "[['standard',1], ['hide_com_shield',1,'sightElevationAPFSDS',0]]";
+    //     // };
 
-        // class rhs_bmp1d_msv {
-        //     displayName = "BMP1-D";
-        //     description = "Carries more soldiers but is less protected.";
-        //     stock = 1;
-        //     spawnEmpty = 1;
-        //     trackCargo = 2;
-        //     condition = "true";
-        //     vehicleInit = "[['standard',1], ['crate_l1_unhide',1,'crate_l2_unhide',1,'crate_l3_unhide',1,'crate_r1_unhide',1,'crate_r2_unhide',1,'crate_r3_unhide',1,'wood_1_unhide',1,'maljutka_hide_source',1,'cargoHandler1',0]]";
-        // };
-    };
+    //     // class rhs_bmp1d_msv {
+    //     //     displayName = "BMP1-D";
+    //     //     description = "Carries more soldiers but is less protected.";
+    //     //     stock = 1;
+    //     //     spawnEmpty = 1;
+    //     //     trackCargo = 2;
+    //     //     condition = "true";
+    //     //     vehicleInit = "[['standard',1], ['crate_l1_unhide',1,'crate_l2_unhide',1,'crate_l3_unhide',1,'crate_r1_unhide',1,'crate_r2_unhide',1,'crate_r3_unhide',1,'wood_1_unhide',1,'maljutka_hide_source',1,'cargoHandler1',0]]";
+    //     // };
+    // };
 
     class Special {
         displayName = "Special";
