@@ -15,7 +15,7 @@ class FDFW {
         radio = "TFAR_anprc152";
         compass = "ItemCompass";
         watch = "ItemWatch";
-        nvgoggles = "";
+        nvgoggles = "Armband_Green_medium2_NVG";
         gps = "";
     };
 

@@ -16,7 +16,7 @@ class russiaw {
         radio = "TFAR_fadak";
         compass = "ItemCompass";
         watch = "ItemWatch";
-        nvgoggles = "";
+        nvgoggles = "Armband_Red_medium2_NVG";
         gps = "";
     };
 
