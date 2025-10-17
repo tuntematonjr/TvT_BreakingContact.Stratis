@@ -96,7 +96,7 @@ class RussiaW {
             spawnEmpty = 1;
             wheelCargo = 2;
             condition = "true";
-            code = "[(_this select 0),['RWR_winter',1],['crate_l1_unhide',1,'crate_l2_unhide',1,'crate_l3_unhide',1,'crate_l4_unhide',1,'crate_r1_unhide',1,'crate_r2_unhide',1,'crate_r3_unhide',1,'crate_r4_unhide',1,'water_1_unhide',1,'water_2_unhide',1,'wheel_1_unhide',1,'wheel_2_unhide',1]] call BIS_fnc_initVehicle;"
+            code = "[(_this select 0),['RWR_winter',1],['crate_l1_unhide',1,'crate_l2_unhide',1,'crate_l3_unhide',1,'crate_l4_unhide',1,'crate_r1_unhide',1,'crate_r2_unhide',1,'crate_r3_unhide',1,'crate_r4_unhide',1,'water_1_unhide',1,'water_2_unhide',1,'wheel_1_unhide',1,'wheel_2_unhide',1]] call BIS_fnc_initVehicle;";
             vehicleInit = "[[],[]]";
         };        
         
